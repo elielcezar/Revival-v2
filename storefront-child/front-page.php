@@ -20,9 +20,9 @@ Template Name: Homepage Custom
   <div class="produtos">
     <div class="container">
       <?php
-        echo do_shortcode('[products limit="8" columns="4" category="destaque"]');
+        echo do_shortcode('[products limit="8" columns="4"]');
       ?>
-      <a href="#" class="btn">Ver Mais</a>
+      <a href="https://revival.com.br/loja/" class="btn">Ver Mais</a>
     </div>
   </div>
 

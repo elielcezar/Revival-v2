@@ -15,7 +15,7 @@ Template Name: Revival
   </div>
   <div class="slogan">
     <div class="container">
-      <img src="http://ecwd.net/revival/wp-content/themes/storefront-child/img/r-revival.png" class="logo" />
+      <img src="https://revival.com.br/wp-content/themes/storefront-child/img/r-revival.png" class="logo" />
       <h3>Easy fashion for a better tomorrow.</h3>
       <p>Aliamos alto padrão em modelagem com as últimas tendências e uma revolução nas práticas de produção e entrega dos nossos produtos. Vem conhecer a gente!</p>
     </div>
@@ -118,7 +118,7 @@ Template Name: Revival
 <section class="transform">
   <div class="container">
     <h3>Queremos transformar a experiência de consumo dos nossos clientes com serviços inovadores, dicas de uso dos produtos e um novo jeito de fazer moda!</h3>
-    <a class="btn" href="#">Fala com a gente!</a>
+    <a class="btn" href="https://revival.com.br/contato">Fala com a gente!</a>
   </div>
 </section>
 

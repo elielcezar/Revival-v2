@@ -1,96 +1,3 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after
- *
- * @package storefront
- */
-
-?>
-
-<?php do_action( 'storefront_before_footer' ); ?>
-
-<footer>
-
-	<div class="container">
-		<div class="row first-line">
-			<div class="col-sm-3">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-rodape.png" class="logo-footer" />
-			</div>
-			<div class="col-sm-9">
-				<h5>Easy fashion for a better tomorrow</h5>
-			</div>
-		</div>
-
-		<div class="row second-line">
-			<div class="col-sm-3">
-				<p>
-					CNPJ: 31.973.763/0001-42
-				</p>
-				<p>
-					+55 (41) 9 9956 1036
-				</p>
-				<p>
-					hello@revival.com.br
-				</p>
-				<p class="redes-sociais">
-					<a href="https://www.instagram.com/revival.brasil/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico-insta.png" /></a>
-					<a href="https://www.facebook.com/RevivalEasyFashion/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico-fb.png" /></a>
-				</p>
-			</div>
-			<div class="col-sm-3">
-				<h5>Informações</h5>
-				<ul>
-					<li><a href="https://revival.com.br/contato">ATENDIMENTO</a></li>
-					<li><a href="https://revival.com.br/trocas-e-devolucoes/">TROCAS E DEVOLUÇÕES</a></li>
-					<li><a href="https://revival.com.br/politica-de-entrega/">POLÍTICA DE ENTREGA</a></li>
-					<li><a href="https://revival.com.br/termos-de-condicao-e-uso/">TERMOS E CONDIÇÕES DE USO</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-3">
-				<h5>Conta</h5>
-				<ul>
-					<li><a href="https://revival.com.br/my-account/">MINHA CONTA</a></li>
-					<li><a href="https://revival.com.br/minha-conta/orders/">MEUS PEDIDOS</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-3">
-				<h5>Segredinho Revival</h5>
-				<p>
-					Seja a primeira a saber!
-				</p>
-				<div class="mail-form">
-					<?php echo do_shortcode('[contact-form-7 id="3440" title="Mailing"]'); ?>
-				</div>
-			</div>
-		</div>
-
-		<div class="row last-line">
-			<div class="col-sm-12">
-				<p class="copyright">
-					Copyright 2019 © Revival.
-				</p>
-			</div>
-		</div>
-
-	</div>
-
-	<?php do_action( 'storefront_footer' ); ?>
-
-</footer>
-
-<?php do_action( 'storefront_after_footer' ); ?>
-
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
-<script>
 jQuery(document).ready(function($){
 
 	var tela = $( window ).width();
@@ -215,14 +122,10 @@ jQuery(document).ready(function($){
 
 		$('.archive ul.products li.product').removeClass('last').removeClass('first');
 
-		$('.single-product .single_add_to_cart_button').click(function(){
-				$(".se-pre-con").fadeIn();
+		$(window).load(function() {
+			$(".se-pre-con").fadeOut("slow");;
 		});
 
 
+
 });
-
-</script>
-
-</body>
-</html>

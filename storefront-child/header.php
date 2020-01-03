@@ -8,7 +8,7 @@
  */
 
 ?><!doctype html>
-<html <?php language_attributes(); ?>>
+<html>
 <head>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -24,9 +24,25 @@
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css"/>
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR5K2MC');</script>
+<!-- End Google Tag Manager -->
+
 </head>
 
 <body <?php body_class(); ?>>
+
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR5K2MC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="se-pre-con">
+  <div class="loader"></div>
+</div>
 
 <header>
   <div class="container">
@@ -35,27 +51,31 @@
       <span class="lines"></span>
     </a>
 
-    <div class="mainMenu">
-    	<div class="mainContainer">
-
-    	</div>
-    </div>
-
     <?php
     do_action( 'storefront_header' );
     ?>
 
   </div>
+
+  <div class="mainMenu">
+    <div class="mainContainer">
+
+    </div>
+  </div>
+
 </header>
 
 <?php if( is_front_page() ) { ?>
+  <?php //echo do_shortcode('[rev_slider alias="home1-slider"]'); ?>
+  <?php if( is_front_page() ) { ?>
 
-  <div class="banners-destaque-desktop">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner-top-desktop.jpg" />
-  </div>
+    <div class="banners-destaque-desktop">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner-top-desktop.jpg" />
+    </div>
 
-  <div class="banners-destaque-mobile">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner-top-mobile.jpg" />
-  </div>
+    <div class="banners-destaque-mobile">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner-top-mobile.jpg" />
+    </div>
 
+  <?php } ?>
 <?php } ?>

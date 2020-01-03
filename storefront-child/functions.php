@@ -3,7 +3,7 @@
 /**
  * Rename product data tabs
  */
-add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
+/*add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
 function woo_rename_tabs( $tabs ) {
 
 	$tabs['description']['title'] = __( 'Sobre a peça' );		// Rename the description tab
@@ -11,7 +11,7 @@ function woo_rename_tabs( $tabs ) {
   unset( $tabs['additional_information'] );  	// Remove the additional information tab
 
 	return $tabs;
-}
+}*/
 
 
 add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
@@ -33,7 +33,7 @@ function my_theme_archive_title( $title ) {
         $title = post_type_archive_title( '', false );
     } elseif ( is_tax() ) {
         $title = single_term_title( '', false );
-    }  
+    }
     return $title;
 }
 
@@ -53,5 +53,11 @@ function register_new_sidebars() {
   ));
 }
 
+// Remove cross-sells at cart
+remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
+
+// REMOVE EMOJI ICONS
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
 
 ?>

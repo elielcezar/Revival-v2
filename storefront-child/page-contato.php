@@ -35,12 +35,12 @@ Template Name: Contato
 
         <h4>Face</h4>
         <p>
-          <a href="http://www.facebook.com/revival-739162532953957">www.facebook.com/revival-739162532953957</a>
+          <a href="https://www.facebook.com/RevivalEasyFashion">www.facebook.com/RevivalEasyFashion</a>
         </p>
 
         <h4>Insta</h4>
         <p>
-          <a href="http://www.instagram.com/revival.brasil">@revival.brasil</a>
+          <a href="https://www.instagram.com/revival.brasil">@revival.brasil</a>
         </p>
 
       </div>
@@ -57,7 +57,7 @@ Template Name: Contato
               <?php the_content();
           endwhile
           ?>
-        </div>        
+        </div>
       </div>
     </div>
 
