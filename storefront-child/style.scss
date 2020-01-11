@@ -286,17 +286,12 @@ header{
     .site-branding{
       width: 100%;
       text-align: center;
-      margin-bottom: 0;
-      //text-indent: -5000em;
+      margin-bottom: 0;      
 
       a{
         display: inline-block;
-        width: 115px;
-        text-indent: -5000em;
-        background: transparent url(img/logo.png) center center no-repeat;
-        background-size: 115px auto;
-        height: 61px;
-        margin: auto;
+        width: 115px;        
+        margin: 17px auto 16px auto;        
       }
 
       .site-description{
@@ -728,6 +723,7 @@ header{
         }
         ol.flex-control-nav{
           width: 100px;
+          height: 97%;
           position: absolute;
           top: 0;
           left: 0;
@@ -739,7 +735,8 @@ header{
           }
 
           .slick-list.draggable{
-            margin-top: 1px;
+            margin-top: 4px;
+            height: 90% !important;
           }
 
           li{
@@ -751,7 +748,6 @@ header{
               margin-bottom: 4px;
             }
           }
-
           .btn-prev,
           .btn-next{
             width: 99px;
@@ -774,6 +770,8 @@ header{
             background-image: url(img/arrow-up.png);
           }
           .btn-next{
+            bottom: 0;
+            position: absolute;
             bottom: 0;
             margin-top: 5px;
             background-image: url(img/arrow-down.png);
@@ -861,7 +859,8 @@ header{
               }
             }
 
-            /*#woocommerce-correios-calculo-de-frete-na-pagina-do-produto{
+            #woocommerce-correios-calculo-de-frete-na-pagina-do-produto,
+            #cfpp{
               margin: 10px 0 0 0;
               display: block !important;
 
@@ -877,7 +876,7 @@ header{
                   float: left;
                   background: #fff;
                   border: 1px solid;
-                  height: 41px !important;
+                  height: 50px !important;
                   padding: 0 0 0 20px;
                   width: 165px;
                   text-align: left;
@@ -891,6 +890,8 @@ header{
                   background-color: $preto !important;
                   border: none;
                   padding: 3px 12px;
+                  text-indent: -5000em;
+                  width: 60px;
                   span{
                     display: none;
                   }
@@ -902,7 +903,7 @@ header{
                   display: none;
                 }
               }
-            }*/
+            }
 
             .quantity {
               margin-right: 0;
@@ -1640,13 +1641,20 @@ header{
             font-size: 15px;
         }
       }
-      #billing_country_field{
+      #billing_country_field,
+      #billing_company_field{
         display: none;
       }
       #billing_persontype_field{
         .select2.select2-container.select2-container--default{
           padding: 10px 45px 14px 30px;
         }
+      }
+      #billing_address_2{
+        margin-top: 24px;
+      }
+      span.optional{
+        display: none;
       }
 
       h3#ship-to-different-address{

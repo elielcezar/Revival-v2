@@ -1,0 +1,119 @@
+$rosa: #eeb1ac;
+$rosa2: #EFB2AB;
+$cinza-claro: #f6f6f8;
+$preto: #202127;
+
+
+.woocommerce-message,
+.woocommerce-info{
+    color: #000;
+    border: none;
+    background: #f6f6f8;
+    border-left: none;
+    text-align: center;
+
+    a.button.wc-forward,
+    a.showcoupon{
+      color: #000;
+      margin: auto;
+      text-transform: uppercase;
+      font-weight: normal;
+      letter-spacing: 1px;
+      border: 1px solid #000 !important;
+      text-align: center;
+      padding: 10px 30px;
+      display: inline-block;
+    }
+}
+
+main{
+  header.entry-header{
+    position: relative;
+    background: transparent;
+    padding-bottom: 0 !important;
+    h1{
+      text-align: left;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+/*--- CARRINHO ----------------------------------------------------------------------*/
+.woocommerce-cart {
+  .site-main {
+    max-width: 1200px;
+    margin: 150px auto 0 auto;
+
+    table.woocommerce-cart-form__contents{
+      border-collapse: collapse;
+
+      .product-subtotal{
+        display: none !important;
+      }
+
+      thead{
+        th{
+          background: transparent;
+          font-family: 'Futura-Bold';
+          color: #000;
+        }
+      }
+      tbody{
+        tr{
+          border: 2px solid $rosa;
+        }
+        td{
+          background: transparent;
+        }
+        td.product-name{
+          a{
+            color: #000;
+            text-decoration: none;
+          }
+        }
+        td.product-quantity{
+          input.qty{
+            text-align: center;
+            background: transparent;
+            border: 1px solid #000;
+            width: 38px;
+            text-align: right;
+            padding: 10px 0 10px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*--- CHECKOUT -----------------------------------------------------------*/
+
+.woocommerce-checkout{
+  .site-main {
+    max-width: 1200px;
+    margin: 150px auto 0 auto;
+
+    form.checkout{
+      .col-1,
+      .col-2{
+        max-width: 100%;
+        width: 100%;
+      }
+      .form-row{
+        flex-wrap: wrap;
+        margin-right: -5px;
+        width: 48% !important;
+        margin: 0 1% 0 0 !important;
+        float: left;
+        display: block;
+        clear: none;
+
+        input.input-text{
+          background: #fff;
+          border: 1px solid #000;
+        }
+      }
+    }
+  }
+}

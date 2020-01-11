@@ -77,10 +77,12 @@ main header.entry-header h1 {
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -98,11 +100,13 @@ a:active,
 a:focus,
 input {
   outline: none !important;
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 * {
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 p {
@@ -205,6 +209,7 @@ a.btn {
 header {
   float: left;
   width: 100%;
+  -webkit-transition: all .3s;
   transition: all .3s;
   z-index: 50;
   position: fixed;
@@ -243,6 +248,7 @@ header .container .menuBtn > span {
   left: 50%;
   top: 50%;
   margin: -1px 0 0 -15px;
+  -webkit-transition: height 100ms;
   transition: height 100ms;
 }
 
@@ -255,6 +261,7 @@ header .container .menuBtn > span:after, header .container .menuBtn > span:befor
   position: absolute;
   left: 50%;
   margin-left: -15px;
+  -webkit-transition: all 200ms;
   transition: all 200ms;
 }
 
@@ -275,11 +282,13 @@ header .container .menuBtn.act > span:after, header .container .menuBtn.act > sp
 }
 
 header .container .menuBtn.act > span:after {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 header .container .menuBtn.act > span:before {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 header .container .site-search,
@@ -302,11 +311,7 @@ header .container .site-branding {
 header .container .site-branding a {
   display: inline-block;
   width: 115px;
-  text-indent: -5000em;
-  background: transparent url(img/logo.png) center center no-repeat;
-  background-size: 115px auto;
-  height: 61px;
-  margin: auto;
+  margin: 17px auto 16px auto;
 }
 
 header .container .site-branding .site-description {
@@ -346,8 +351,10 @@ header .mainMenu {
   width: 100%;
   text-align: center;
   opacity: 0;
+  -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 header .mainMenu a {
@@ -356,12 +363,14 @@ header .mainMenu a {
 
 header .mainMenu.act {
   opacity: 1;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 header .mainMenu.act ul li {
   opacity: 1;
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 header .mainMenu button.menu-toggle {
@@ -787,6 +796,7 @@ header .mainMenu #menu-menu-principal li a {
 
 .single-product .site-main div.product .woocommerce-product-gallery ol.flex-control-nav {
   width: 100px;
+  height: 97%;
   position: absolute;
   top: 0;
   left: 0;
@@ -801,7 +811,8 @@ header .mainMenu #menu-menu-principal li a {
 }
 
 .single-product .site-main div.product .woocommerce-product-gallery ol.flex-control-nav .slick-list.draggable {
-  margin-top: 1px;
+  margin-top: 4px;
+  height: 90% !important;
 }
 
 .single-product .site-main div.product .woocommerce-product-gallery ol.flex-control-nav li {
@@ -843,6 +854,8 @@ header .mainMenu #menu-menu-principal li a {
 }
 
 .single-product .site-main div.product .woocommerce-product-gallery ol.flex-control-nav .btn-next {
+  bottom: 0;
+  position: absolute;
   bottom: 0;
   margin-top: 5px;
   background-image: url(img/arrow-down.png);
@@ -916,48 +929,6 @@ header .mainMenu #menu-menu-principal li a {
 
 .single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart {
   padding-top: 0;
-  /*#woocommerce-correios-calculo-de-frete-na-pagina-do-produto{
-              margin: 10px 0 0 0;
-              display: block !important;
-
-              .calculo-de-frete{
-                float: left;
-                width: 100%;
-                margin-bottom: 40px;
-                h5{
-                  font-size: 16px;
-                  margin-top: 10px;
-                }
-                input{
-                  float: left;
-                  background: #fff;
-                  border: 1px solid;
-                  height: 41px !important;
-                  padding: 0 0 0 20px;
-                  width: 165px;
-                  text-align: left;
-                  border-radius: 0 !important;
-                  margin-right: 0;
-                  &::-webkit-input-placeholder{font-weight: 300; color: $preto !important; font-style: italic; letter-spacing: 1px; font-size: 14px; text-transform: uppercase;}
-                  &::-moz-placeholder{font-weight: 300; color: $preto !important; font-style: italic; letter-spacing: 1px; font-size: 14px; text-transform: uppercase;}
-                  &::-ms-input-placeholder{font-weight: 300; color: $preto !important; font-style: italic; letter-spacing: 1px; font-size: 14px; text-transform: uppercase;}
-                }
-                #calcular-frete {
-                  background-color: $preto !important;
-                  border: none;
-                  padding: 3px 12px;
-                  span{
-                    display: none;
-                  }
-                  img{
-                    width: 35px;
-                  }
-                }
-                #cfpp_credits{
-                  display: none;
-                }
-              }
-            }*/
 }
 
 .single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart .containerCalculator {
@@ -979,6 +950,92 @@ header .mainMenu #menu-menu-principal li a {
   color: #202127 !important;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #woocommerce-correios-calculo-de-frete-na-pagina-do-produto,
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #cfpp {
+  margin: 10px 0 0 0;
+  display: block !important;
+}
+
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #woocommerce-correios-calculo-de-frete-na-pagina-do-produto .calculo-de-frete,
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #cfpp .calculo-de-frete {
+  float: left;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #woocommerce-correios-calculo-de-frete-na-pagina-do-produto .calculo-de-frete h5,
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #cfpp .calculo-de-frete h5 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #woocommerce-correios-calculo-de-frete-na-pagina-do-produto .calculo-de-frete input,
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #cfpp .calculo-de-frete input {
+  float: left;
+  background: #fff;
+  border: 1px solid;
+  height: 50px !important;
+  padding: 0 0 0 20px;
+  width: 165px;
+  text-align: left;
+  border-radius: 0 !important;
+  margin-right: 0;
+}
+
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #woocommerce-correios-calculo-de-frete-na-pagina-do-produto .calculo-de-frete input::-webkit-input-placeholder,
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #cfpp .calculo-de-frete input::-webkit-input-placeholder {
+  font-weight: 300;
+  color: #202127 !important;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #woocommerce-correios-calculo-de-frete-na-pagina-do-produto .calculo-de-frete input::-moz-placeholder,
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #cfpp .calculo-de-frete input::-moz-placeholder {
+  font-weight: 300;
+  color: #202127 !important;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #woocommerce-correios-calculo-de-frete-na-pagina-do-produto .calculo-de-frete input::-ms-input-placeholder,
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #cfpp .calculo-de-frete input::-ms-input-placeholder {
+  font-weight: 300;
+  color: #202127 !important;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #woocommerce-correios-calculo-de-frete-na-pagina-do-produto .calculo-de-frete #calcular-frete,
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #cfpp .calculo-de-frete #calcular-frete {
+  background-color: #202127 !important;
+  border: none;
+  padding: 3px 12px;
+  text-indent: -5000em;
+  width: 60px;
+}
+
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #woocommerce-correios-calculo-de-frete-na-pagina-do-produto .calculo-de-frete #calcular-frete span,
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #cfpp .calculo-de-frete #calcular-frete span {
+  display: none;
+}
+
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #woocommerce-correios-calculo-de-frete-na-pagina-do-produto .calculo-de-frete #calcular-frete img,
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #cfpp .calculo-de-frete #calcular-frete img {
+  width: 35px;
+}
+
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #woocommerce-correios-calculo-de-frete-na-pagina-do-produto .calculo-de-frete #cfpp_credits,
+.single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart #cfpp .calculo-de-frete #cfpp_credits {
+  display: none;
 }
 
 .single-product .site-main div.product .summary form.cart .woocommerce-variation-add-to-cart .quantity {
@@ -1745,7 +1802,8 @@ header .mainMenu #menu-menu-principal li a {
 }
 
 .woocommerce-checkout .site-main form.checkout .form-row {
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-right: -5px;
   width: 47% !important;
   margin: 10px 3% 0 0 !important;
@@ -1787,12 +1845,21 @@ header .mainMenu #menu-menu-principal li a {
   font-size: 15px;
 }
 
-.woocommerce-checkout .site-main form.checkout #billing_country_field {
+.woocommerce-checkout .site-main form.checkout #billing_country_field,
+.woocommerce-checkout .site-main form.checkout #billing_company_field {
   display: none;
 }
 
 .woocommerce-checkout .site-main form.checkout #billing_persontype_field .select2.select2-container.select2-container--default {
   padding: 10px 45px 14px 30px;
+}
+
+.woocommerce-checkout .site-main form.checkout #billing_address_2 {
+  margin-top: 24px;
+}
+
+.woocommerce-checkout .site-main form.checkout span.optional {
+  display: none;
 }
 
 .woocommerce-checkout .site-main form.checkout h3#ship-to-different-address {
@@ -1805,7 +1872,8 @@ header .mainMenu #menu-menu-principal li a {
   -webkit-appearance: none;
   background-color: #fff;
   border: 1px solid #202127;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding: 12px;
   border-radius: 0;
   display: inline-block;
@@ -1822,7 +1890,8 @@ header .mainMenu #menu-menu-principal li a {
 }
 
 .woocommerce-checkout .site-main form.checkout h3#ship-to-different-address .input-checkbox:active, .woocommerce-checkout .site-main form.checkout h3#ship-to-different-address .input-checkbox:checked:active {
-  box-shadow: none, inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: none, inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: none, inset 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .woocommerce-checkout .site-main form.checkout h3#ship-to-different-address .input-checkbox:checked {
@@ -2083,6 +2152,7 @@ header .mainMenu #menu-menu-principal li a {
 }
 
 .page-template-page-contato section#principal .duvidas p {
+  -webkit-transition: all .3s;
   transition: all .3s;
   opacity: 0;
   height: 0;
@@ -2157,8 +2227,12 @@ header .mainMenu #menu-menu-principal li a {
 
 .page-template-page-revival #principal .container .col-sm-6 {
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .page-template-page-revival #principal .container .col-sm-6 h4 {
@@ -2443,7 +2517,9 @@ footer .first-line img.logo-footer {
 @media (min-width: 768px) {
   footer .second-line .col-sm-3:nth-child(4) {
     max-width: 30%;
-    flex: 0 0 30%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
   }
 }
 
@@ -2581,3 +2657,4 @@ footer .last-line p.copyright {
 .storefront-handheld-footer-bar {
   display: none !important;
 }
+/*# sourceMappingURL=style.css.map */

@@ -13,14 +13,14 @@ function woo_rename_tabs( $tabs ) {
 	return $tabs;
 }*/
 
-
+/*
 add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
 return array(
 'width' => 200,
 'height' => 200,
 'crop' => 0,
 );
-} );
+} );*/
 
 function my_theme_archive_title( $title ) {
     if ( is_category() ) {
@@ -59,5 +59,8 @@ remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' 
 // REMOVE EMOJI ICONS
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
+
+// Disable the toolbar completely for all users
+add_filter('show_admin_bar', '__return_false');
 
 ?>
